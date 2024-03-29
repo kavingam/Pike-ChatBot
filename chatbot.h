@@ -36,4 +36,5 @@ void restore(bot *p,int n);
 void borrowLeft(bot *p,int n);
 void borrowRight(bot *p,int n);
 void combine(bot *p,int m);
+
 #endif
