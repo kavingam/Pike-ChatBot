@@ -15,7 +15,7 @@
 
 typedef struct bot_arch bot;
 struct bot_arch {
-    int cout;
+    int count;
     int key[MAX+1];
     struct bot_arch *config[MAX+1];
 };
@@ -24,11 +24,12 @@ bot *search(int skey,bot *p,int *pn);
 int search_info(int skey,bot *p,int *pn);
 void printList(bot *ptr,int blank);
 /*  functions used in insertion */ 
-bot *insertByShift(int k,bot *proot);
+bot *insert(int ikey,bot *proot);
+void insetByShift(int k,bot *krconfig,bot *p,int n);
 int rec_ins(int ikey,bot *p,int *pk,bot **pkrchild);
 void split(int k,bot *krchild,bot *p,int n,int *upkey,bot **newnode);
 /* functions used in deletion */
-bot *delete(int dkey,bot *p);
+bot *delete(int dkey,bot *root);
 void rec_del(int dkey,bot *p);
 void delByShift(bot *p,int n);
 int copy_succkey(bot *p,int n);
@@ -36,4 +37,7 @@ void restore(bot *p,int n);
 void borrowLeft(bot *p,int n);
 void borrowRight(bot *p,int n);
 void combine(bot *p,int m);
+
+#include "sys.c"
+
 #endif
