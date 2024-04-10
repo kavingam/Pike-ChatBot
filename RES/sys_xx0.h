@@ -27,15 +27,19 @@ struct sys_xx0 {
 };
 
 /* B - Tree */
-xx0 find(double skey,xx0 *p,int *pn);
+xx0 *find(double skey,xx0 *p,int *pn);
 int find_xx0(double skey,xx0 *p,int *pn);
 void view_xx0(xx0 *ptr,int blank);
 void inorder(xx0 *ptr);
+/*Functions used in insertion*/
+xx0 *insert(double ikey,xx0 *proot);
+int rec_ins(double ikey,xx0 *p,double *pk,xx0 **pkrsub);
+void insertByShift(int k,xx0 *krsub,xx0 *p,int n);
+void split(int k,xx0 *krsub,xx0 *p,int n,int *upkey,xx0 **newnode);
 
 
-
-
-
-
+#include "sys_xx0/xxx001.c"
+#include "sys_xx0/xxx002.c"
+#include "sys_xx0/xxx003.c"
 
 #endif 
