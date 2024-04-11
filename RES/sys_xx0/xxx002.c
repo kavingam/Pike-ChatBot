@@ -48,9 +48,9 @@ void insertByShift(int k,xx0 *krsub,xx0 *p,int n) {
     p->sub[n+1] = krsub;
     p->count++;
 }
-void split(int k,xx0 *krsub,xx0 *p,int n,int *upkey,xx0 **newnode) {
+void split(double k,xx0 *krsub,xx0 *p,int n,int *upkey,xx0 **newnode) {
     int i,j;
-    int lastkey;
+    double lastkey;
     xx0 *lastsub;
     int d = CEIL_BTDIV;
     if(n==BT_MAX) {

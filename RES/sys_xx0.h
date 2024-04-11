@@ -36,7 +36,15 @@ xx0 *insert(double ikey,xx0 *proot);
 int rec_ins(double ikey,xx0 *p,double *pk,xx0 **pkrsub);
 void insertByShift(int k,xx0 *krsub,xx0 *p,int n);
 void split(int k,xx0 *krsub,xx0 *p,int n,int *upkey,xx0 **newnode);
-
+/*Function used in deletion*/
+xx0 *delete(double dkey,xx0 *p);
+void rec_del(double dkey,xx0 *p);
+void delByShift(xx0 *p,int n);
+int copy_succkey(xx0 *p,int n);
+void restore(xx0 *p,int n);
+void borrowLeft(xx0 *p,int n);
+void borrowRight(xx0 *p,int n);
+void combine(xxx0 *p,int m);
 
 #include "sys_xx0/xxx001.c"
 #include "sys_xx0/xxx002.c"
